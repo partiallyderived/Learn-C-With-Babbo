@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{applekeys}
+\usepackage{indentfirst}
+\usepackage{keystroke}
+
+
+\begin{document}
+\title{Terminals}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\section*{}
+Terminals, as explained in the previous lesson, are textual user interfaces where the user may navigate and manipulate
+their file system or execute programs. Indeed, when we create programs in C we will be executing those programs in some
+terminal. The terminal you will use will depend on your operating system (Windows, Mac, or Linux). In the following 
+sections, I will describe the
+\textbf{Command Prompt}, which is the terminal primarily used on Windows systems, and \textbf{Bash}, the terminal
+primarily used on UNIX (Mac and Linux) systems. You only need to read the section corresponding to your operating 
+system. I will use the verb ``enter" to mean ``to type and then press enter."
+\section*{Command Prompt}
+The Command Prompt may be opened by pressing the Windows key + R, typing ``cmd", and then pressing enter. Immediately,
+you may enter \verb|dir| to see a list of the files and directories (which have \verb|<DIR>| next to them) inside
+your current directory, which has its name given at the top of the output. \verb|dir| is what is called a 
+\textbf{command}, which is a named routine that may be run in your terminal. Also extremely useful is the command
+\verb|chdir|, short for ``change directory", which may be used to go to a different directory. To do so, enter, for
+instance, \\ \\
+\verb|chdir Documents| \\ \\ to navigate to the Documents directory, from which you may enter \verb|dir| again
+to list its contents. Here, \verb|Documents| is given as an \textbf{argument} or synonymously \textbf{parameter} to
+the command \verb|chdir|, arguments being inputs appearing after the name of the command that are used to determine
+what the command should do. Without the argument \verb|Documents|, the \verb|chdir| command couldn't know where you
+wanted to change directories to. You may also change to a directory using that directory's full path, formally called
+its \textbf{absolute path}. It's analogue is a \textbf{relative path}, as in how \verb|Documents| was used earlier.
+To navigate to your home directory with an absolute path, enter \\ \\
+\verb|chdir \Users\<your username>| \\ \\
+Note that I use \verb|<your username>| to denote where you should put your actual username, and I don't mean for you
+to enter the less than and greater than signs literally. It is common to use the less than and greater than signs
+in this way, where they are called \textbf{angle brackets}, to denote a \textbf{placeholder} for a variable input. 
+Continuing, if you wanted to change to the outermost directory or \textbf{root} of your C drive, you could enter
+\\ \\
+\verb|chdir \| \\ \\
+
+Enter \verb|dir| again. Notice at the top of the list are two directories named \verb|.| (a single period) and 
+\verb|..| (two periods). These 
+represent your current and parent directories, respectively. Thus, if you enter \\ \\
+\verb|chdir .| \\ \\
+you will not change directories at all. 
+However, you may enter \\ \\
+\verb|chdir ..| \\ \\
+to navigate to your \textbf{parent} or enclosing directory,
+which can be very useful. With this knowledge, you now know how to use the Command Prompt to navigate your file system.
+
+\section*{Bash}
+If you are on Linux, you have probably already interacted with your terminal: if you have not, you can probably find it 
+as an App which has a sort of black box as its icon. On Mac, you can open the terminal by pressing \cmdkey + \Spacebar
+and entering ``Terminal". The terminal you are using is called ``Bash", despite the fact that the application you opened
+was probably not named Bash. \\
+
+Now that your terminal is open, enter \verb|ls|, which stands for ``list status". You will see a list of files and 
+directories inside your current 
+directory. \verb|ls| is called a \textbf{command}, which is a named routine that may be run in your terminal. To see
+what directory we're actually in, enter \verb|pwd|, which stands for ``print working directory." You will likely see
+something like \verb|/Users/<your username>| or \verb|/home/users/<your username>|. Here, I use \textbf{angle brackets},
+which are a pair of less than and greater than signs which enclose something, as a \textbf{placeholder} for something.
+This is a common usage of angle brackets. \\
+
+We can change our current directory using the \verb|cd| command, which stands for ``change directory". 
+You probably have, for example, a directory called ``Documents" in your home directory. To change into it, enter \\ \\
+\verb|cd Documents| \\ \\
+Here, \verb|Documents| is an \textbf{argument} or synonymously \textbf{parameter} to the 
+\verb|cd| command, an argument being some input following the name of the command. In this case, the argument tells \verb|cd|
+what directory you want to change into. You may change back into your home directory using \verb|cd ..| (two periods). 
+\verb|..| is a
+symbol representing your \textbf{parent} or enclosing directory, whereas \verb|.|, just a single period, is your current
+directory. Therefore, \\ \\
+\verb|cd .| \\ \\ 
+does not change directories at all. Now enter \\ \\ 
+\verb|cd /| 
+\\ \\ 
+This takes you to your 
+\textbf{root} directory, which is the directory from which all files and directories in your file system ``branch off"
+from. To return to your home directory from here, you may simply enter \verb|cd| with no arguments. Alternatively, you
+could enter the full or \textbf{absolute path} of your home directory in the \verb|cd| command, which may look something 
+like \\ \\ 
+\verb|cd /home/users/<your username>| \\ \\
+In contrast to an absolute path is a \textbf{relative path}, such as 
+\verb|Documents| in \verb|cd Documents|. You now know the basics of navigating your file system with Bash.
+
+\end{document}

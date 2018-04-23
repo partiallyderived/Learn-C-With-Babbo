@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{applekeys}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+}
+\usepackage{indentfirst}
+\usepackage{keystroke}
+\begin{document}
+\title{Installing gcc}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\section*{gcc}
+Because C is a compiled language, we will need to install a C compiler for your system
+if it does not already have one. The C compiler program is called \textbf{gcc}, which stands for
+``GNU Compiler Collection". I will give
+directions on how to install gcc for the various operating systems in the following sections.
+\section*{Windows}
+\begin{enumerate}
+\item Go to \url{http://www.mingw.org}
+\item Click the ``Download Installer" button. A download should start automatically.
+\item Open the downloaded file, named ``mingw-get-setup.exe" at the time of writing.
+\item Click ``Install", then click ``Continue"
+\item Wait for installation to complete, then click ``Continue"
+\item You should see an interface listing packages that may be installed. Check ``mingw32-gcc-g++" and then
+click ``Mark for installation."
+\item Click on ``Installation" in the top left and select ``Apply Changes."
+\item Wait for installation to complete, and then close the dialog box.
+\item Press the Windows key and type ``environment variables" and select the first option.
+\item Click on the ``Environment Variables..." button at the bottom right.
+\item In the top box, click on the entry with ``Path" under the variable column.
+\item Click the ``Edit..." button
+\item If you have an ``Add..." button, click it and paste (without quotes) ``C:\textbackslash MinGW\textbackslash bin" into the new entry.
+If you don't have an add button, paste (without quotes, note the semi-colon) ``;C:\textbackslash MinGW\textbackslash bin" to the end of the
+Path content, without modifying the existing Path.
+\item Press ``OK" until you have closed the window with the ``Environment Variables..." button. \\
+\textbf{Important}: Do not click ``Cancel" or close the windows with the X in the top right: this will discard your changes.
+\item Open the Command Prompt (Windows Key + R, and then enter ``cmd"). Enter \verb|gcc|. You
+should see something like \\ \\
+\verb|gcc: fatal error: no input files| \\
+\verb|compilation terminated.| \\ \\
+If so, your installation was successful. If instead you see something like \\ \\
+\verb|'gcc' is not recognized as an internal or external command,| \\
+\verb|operable program or batch file.| \\ \\
+then something went wrong in your installation. If the file \verb|C:\MinGW\bin\gcc| exists on your system,
+you have probably not set your Path environment variable correctly. Also, you need to have opened a \textit{new}
+Command Prompt after editing the Path environment variable, \verb|gcc| will not be recognized if you attempt to 
+use an already opened Command Prompt.
+\end{enumerate}
+
+\section*{Mac}
+\begin{enumerate}
+\item Open the AppStore and search for Xcode.
+\item Install Xcode.
+\item After Xcode is done installing, open a terminal (\cmdkey + \Spacebar, enter ``Terminal") and enter gcc. 
+You should see something like \\ \\
+\verb|gcc: fatal error: no input files| \\
+\verb|compilation terminated.| \\ \\
+If so, your installation was successful. If instead you see something like \\ \\
+\verb|gcc: command not found| \\ \\
+then something went wrong in your installation. Make sure that installation has finished, and that you opened
+the terminal \textit{after} installation was complete, and did not use a previously open terminal.
+\end{enumerate}
+
+\section*{Linux}
+You probably already have \verb|gcc| installed. To check, open a terminal and enter \verb|gcc|. 
+If you see something like \\ \\
+\verb|gcc: fatal error: no input files| \\
+\verb|compilation terminated.| \\ \\
+You already have \verb|gcc|. Otherwise, you should install it using a package manager available for your
+linux distribution. Try the following commands: \\ \\
+\verb|sudo apt-get update && apt-get install gcc| \\
+\verb|sudo yum install gcc| \\ \\
+If neither of these commands work, enter \verb|cat /etc/*-release| to get your linux distribution name
+(there should be a line similar to \verb|NAME=<name>|), and use
+a search engine like Google with the query ``install gcc on \textless distribution name\textgreater" to get help on installing
+\verb|gcc| on your distribution, or look up how to install it from source.
+
+\end{document}

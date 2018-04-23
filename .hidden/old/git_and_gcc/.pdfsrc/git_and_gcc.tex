@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\begin{document}
+\title{The git And gcc Commands}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+\section*{}
+Now that we've become loosely acquainted with Bash, we need to install two commands for it that will be essential this
+course. These commands are \verb|git| and \verb|gcc|. Refer to your operating system's subsection for how to install
+them.  Note that there are no sections provided that describe how to install \verb|git| and \verb|gcc| on 
+Windows systems that cannot install the Ubuntu subsystem, or Linux machines which
+are not Ubuntu, but there are plenty of resources available online for those interested. Note that it is likely if you
+are running Linux that you already have \verb|git| and \verb|gcc| installed. \\
+
+\subsection*{Windows and Ubuntu}
+To install \verb|git| and \verb|gcc| on Windows running the Ubuntu subsystem or an Ubuntu machine, 
+enter the following lines in Bash, which will prompt you for your UNIX user password: \\ \\
+\verb|sudo apt-get update| \\
+\verb|sudo apt-get install git| \\
+\verb|sudo apt-get install gcc| \\
+
+After you've run these lines, enter \verb|git| and you should see some text describing how to use \verb|git|. 
+If instead you see something similar to ``command not found", something went wrong with your installation. \\ 
+Likewise, enter \verb|gcc|, and you should see something like ``fatal error: no input files" if the installation 
+succeeded. If it says command not found or something similar, \verb|gcc| was not properly installed. \\
+
+You won't need to know \verb|sudo| or \verb|apt-get| to learn C, but I'll give some brief context for those interested.
+The command \verb|sudo| means ``do as superuser" (su = superuser, do = do). It is basically synonymous with something like
+``Run as Adminstrator" that you may have seen on Windows: whatever follows \verb|sudo| is executed as a privileged/super
+user named ``root", and running as root allows you to perform tasks that require special permissions, such as those for
+administrators, like installing software. \\
+
+The command \verb|apt-get| is a software management utility for Ubuntu 
+(not Bash in general) that lets you install software directly from Bash. The first command \verb|sudo apt-get update|
+updates the list of available software packages, so that if new software became available since the last time you ran
+\verb|update|, you will be able to install it. The next two commands are self-explanatory: they utilize
+\verb|apt-get install| to install \verb|git| and \verb|gcc|.
+\subsection*{Mac}
+\verb|git| and \verb|gcc| are provided on a Mac system through the Xcode development tools. To install them, go to the 
+APP Store and search for Xcode and install it. After installation is complete, open a new Terminal (do not use a 
+Terminal that was already open) and enter \verb|git|. You should see text describing how to use \verb|git|. Similarly,
+enter \verb|gcc|, after which you should see something similar to ``fatal: no input files." If either of these commands
+output something like ``command not found", the installation was probably unsuccessful and you may need to 
+troubleshoot online.
+
+\section*{The git Command}
+\verb|git| is a \textbf{version control} system, which allow for the storage, update, and management of software 
+projects. We won't be using it much in this course, except to get the latest updates and additions to the lessons. 
+Nonetheless, it is an extremely useful tool that is used in the majority of software development companies to organize
+code and other assets produced by teams. \\ 
+
+For this course, we will first use \verb|git| to ``clone" (download) the storage space for this course, which is called
+a \textbf{repository}. To do so, open bash and pay attention to your working directory, since you will be navigating to
+a directory we will create here to complete the lessons. Enter the following command: \\ \\
+\verb|git clone https://github.com/partiallyderived/Learn-C-With-Babbo.git| \\
+This will download the course materials into a directory called ``learn-c-with-babbo" on your computer. Next, enter the
+directory with \verb|cd learn-c-with-babbo| and list the directory contents with \verb|ls|, and you should see the
+various lessons for the course. Whenever new lessons are added, navigate to this directory and enter
+\verb|git pull| to download the latest changes. \\
+
+To actually view the course materials, it will probably be more convenient for you to navigate to this folder with
+your computer's file system interface. On Windows, you can probably find it easily by pressing the Windows key and
+typing ``learn-c-with-babbo", where on a Mac you could navigate to it with Finder. The next lesson will have
+recommendations for text-editors that are suitable for programming in (though for what it's worth, you can code entirely
+on the command line if you want to).
+
+\section*{The gcc Command}
+\verb|gcc| is a compiler that converts C code into machine code. I will go into more detail on \verb|gcc| when
+we start programming (L1.1).
+\end{document}

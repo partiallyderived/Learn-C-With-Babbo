@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{applekeys}
+\usepackage{keystroke}
+\usepackage{listings}
+
+
+\begin{document}
+\title{The Bash Shell}
+\author{Learn C With Babbo}
+\date{}
+
+\section*{The Bash Shell}
+This lesson will teach you the basics of using \textbf{Bash}, a terminal for UNIX systems (Mac and Linux). If you are
+using Windows 10, it is highly recommended that you download and install Bash for Windows as described in the next
+section, as usage of Windows' command
+prompt will not be shown here. If you are on Mac, you may open a Bash terminal by pressing \cmdkey\ + \Spacebar, typing
+"Terminal" and then pressing enter. If you are on Linux, I'm just going to assume you already know how to open a 
+terminal.
+
+\section*{Installing Bash on Windows 10 (Skip if not on Windows)}
+To install Bash on Windows 10, do the following:
+\begin{enumerate}
+\item Press the Windows key
+\item Type "For developers" and press Enter
+\item Click the "Develop mode" option and click "Yes"
+\item Restart your computer
+\item Press the Windows key
+\item Type "Turn Windows features on or off" and press Enter
+\item Check the box next to "Windows Subsystem for Linux"
+\item Click OK
+\item After installation finishes, restart your computer
+\item Press the Windows key
+\item Type "Microsoft Store" and press Enter. This should open the Microsoft Store.
+\item With the search in the top right, Type "Ubuntu" and select the App of the same name.
+\item Click Install
+\item Press the Windows Key
+\item Type "bash" and press Enter. This should open a shell similar to the Command Prompt.
+\item You should be prompt to enter a username to make a new UNIX account. It does not need to match your Windows
+username but cannot be "admin."
+\item Create a password for the user.
+\item Congratulations, you have installed Bash for Windows! You may launch it at anytime by pressing the 
+Windows Key and entering "bash."
+\end{enumerate}
+
+\section*{Navigation}
+Now that you have launch your Bash terminal, we will see how you may use it to navigate your \textbf{file system}, that
+is, your computer's \textbf{files} and \textbf{directories} (which are often called "folders").
+First, type \verb|pwd|, which stands for "print working directory", and press
+enter (from now on, I will use "enter" as verb meaning to type a command and then press enter). You will probably
+see something similar to \verb|/Users/MyUserName|: this is your \textbf{home directory}. You have probably navigated
+your file system on your operating system before through some visual interface, but you
+can also do it through Bash. For example, enter \\ \\
+\verb|ls| \\ \\
+and you should see a list of all the files and 
+directories in your home directory. You likely see a directory called "Documents" or something similar. To enter
+it or another directory, enter \\\\
+\verb|cd <directory name>| \\\\ which in this case is \\\\\verb|cd Documents|\\\\ to navigate to it.
+Note that I put \verb|<directory name>| as a placeholder for the directory name: a pair of angle brackets \verb|<>| is
+commonly used to denote a placeholder for an input that could vary. \verb|cd| stands for "Change Directory", and 
+\verb|cd|, \verb|ls|, and \verb|pwd| are examples of Bash \textbf{commands}. The directory name appearing after 
+\verb|cd| is called an \textbf{argument}. Commands may have 0, 1, or several arguments. \verb|ls| may take an argument
+as well: \verb|ls <directory name>| will list the contents of the given directory instead of the current directory. \\
+
+Now that you've navigated to a directory, you may want to navigate to the previous directory: to do so, enter 
+\\\\\verb|cd ..|\\\\ In Bash, \verb|..| is a special name for a directory's \textbf{parent directory}. Finally, you may 
+want to eventually return to your home directory in your Bash session. To do so, simply enter \\\\\verb|cd|\\\\ with no 
+arguments, and you will be returned to your home directory.
+\section*{Brief Overview of Common Bash Commands}
+This course is about C, so I will not spend too much time going into detail on how to use Bash. However, some of the
+basic commands may be useful to you while you are leveraging Bash to compile and run C programs, or you may just
+just find it interesting. Note that I will neither give a full or details version of the commands and their arguments,
+just a basic description. \\
+\begin{tabular}{|p{0.35\linewidth}|p{0.65\linewidth}|}
+\hline
+\textbf{Command} & \textbf{Description} \\\hline
+\verb|cat <file name>| & Output the contents of the given file \\\hline
+\verb|cd <directory name>| & Navigates to the given directory. If the directory is omitted, 
+navigates to the home directory instead.\\\hline
+\verb|echo <arguments>| & Outputs the given arguments to the console \\\hline
+\verb|ls <file or directory>| & If no argument is given, lists the contents of the current directory.
+If an existing file is given, outputs the name of the file. If a directory is given, lists the contents of that 
+directory \\\hline
+\verb|man <command name>| & Outputs a detailed manual of a given command. Useful if you want to learn more about
+the commands listed here. \\\hline
+\verb|mkdir <directory name>| & Creates a directory with the given name \\\hline
+\verb|pwd| & Outputs the full path of the current directory \\\hline
+\verb|rm <file name>| & Removes the given file. Does not work for directories \\\hline
+\verb|rmdir <directory name>| & Removes the given directory, which must be empty \\\hline
+\verb|vim <file name>| & Opens the given file in the text-based editor \verb|vim|. You can use this to create and write
+to files using Bash. To learn how to use it (recommended), see http://www.openvim.com/ \\\hline
+\end{tabular}
+\end{document}
