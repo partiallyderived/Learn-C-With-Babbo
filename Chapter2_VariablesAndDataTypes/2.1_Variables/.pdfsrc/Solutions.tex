@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 2.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+\begin{enumerate}
+\item a) Declared \\
+To say \verb|my_var| was initialized, we would've had to assign it on declaration, as in 
+
+\begin{lstlisting}[style=CStyle]
+int my_var = 10;
+\end{lstlisting}
+Likewise, assignment requires an equals sign. We haven't covered pineapples yet.
+
+\item c) Data Type
+
+\item c) Variable, Identifier.
+
+\item 
+\begin{enumerate}
+\item Not initialized, declared \\
+\item Initialized \\
+\item Not initialized, declared and assigned \\
+\item Not initialized, assigned
+\end{enumerate}
+
+\item 
+b) Literal
+
+\item
+\verb|my_var2| is equal to 2. Assignment of \verb|my_var1| to 4 does not change the value of \verb|my_var2|: the code
+
+\begin{lstlisting}[style=CStyle]
+int my_var2 = my_var1;
+\end{lstlisting}
+Assigns \verb|my_var2| to the value of \verb|my_var1| \textbf{at the time of assignment}, it does not continue to
+``update" to new values of \verb|my_var1|, unless you assign \verb|my_var2| to \verb|my_var1| again.
+
+\item
+a) Valid Identifier \\
+b) Valid Identifier \\
+c) Invalid Identifier: identifiers may not begin with a digit \\
+d) Valid Identifier \\
+e) Valid Identifier \\
+f) Invalid Identifier: identifier may only contain alphanumeric characters(a-z, A-Z, 0-9) and underscores, not symbols 
+like ! \\
+g) Invalid Identifier, for the reasons listed above. \\
+h) Valid Identifier \\
+
+\item
+\begin{lstlisting}[style=CStyle]
+printf("%d\n", my_var);
+\end{lstlisting}
+\end{enumerate}
+\end{document}

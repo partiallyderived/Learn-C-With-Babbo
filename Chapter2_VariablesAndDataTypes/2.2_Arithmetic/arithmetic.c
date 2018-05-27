@@ -5,10 +5,10 @@
 int main(void) {
     // "float" stands for "floating point number."
     // floating point numbers are numbers which may have fractional parts.
-    // 3.14 in this case is a float literal.
+    // 3.1416 in this case is a float literal.
     float my_float = 3.1416;
     
-    // Printing a float is as simply as printing an int, except we use the "%f" format specifier instead of "%d":
+    // Printing a float is as simple as printing an int, except we use the "%f" format specifier instead of "%d":
     printf("my_float = %f\n", my_float);
     
     // We can also modify the format specifier to print only a given number of digits:
@@ -23,7 +23,7 @@ int main(void) {
     double my_double = 2.718281828;
     printf("my_double to 4 digits is %.4f\n", my_double);
     
-    // Arithmetic is simply in C. Let's start by doing some common operations on ints.
+    // Arithmetic is simple in C. Let's start by doing some common operations on ints.
     int a = 13;
     int b = 5;
     
@@ -40,9 +40,13 @@ int main(void) {
     printf("sum = %d\n", sum);
     
     // Subtraction and multiplication are also intuitive. Multiplication is denoted by an asterisk (*).
-    // Note that C follows the standard order of operations.
-    int result = a - b * 3; // b * 3 happens first, then a - (b * 3);
+    // Note that C follows the standard order of operations: 
+    // Division and multiplication, then subtraction and addition. If an expression contains both additions and
+    // subtractions, they are evaluated in order from left to right: same with divison and multiplication.
+    int result = a - b * 3; // b * 3 happens first, then the result is subtracted from a;
     printf("result = %d\n", result);
+    result = 5 - 6 + 2 - 3; // Evaluated from left to right, to yield -2.
+    result = 5 + 3 * 5 - 8 / 4; // Multiplication and division are evaluated first, yielding 5 + 15 - 2, and then 18.
     
     // We can use parentheses to disambiguate and control the order that operations are evaluated.
     printf("(%d - %d) * 3 = %d\n", a, b, (a - b) * 3); // a - b happens first, then that is multiplied by 3.
@@ -53,7 +57,7 @@ int main(void) {
     // Also note that I put an expression for the result.
     // Functions may receive expressions as well as variables and literals as arguments.
     
-    // Our last of the four canonical arithmetic operations is division.
+    // Our last of the four usual arithmetic operations is division.
     printf("%d / %d = %d\n", a, b, a / b);
     
     // That last printf will print "12 / 5 = 2".
@@ -101,6 +105,24 @@ int main(void) {
     // the division. Sometimes, it is still helpful to add parentheses to disambiguate:
     printf("%d / %d = %f\n", a, b, ((double) a) / b);  // Same result as before.
     
+    // Note that even if the result of a division is mathematically an integer, the resulting type is
+    // still a floating point type:
+    // 18.0 is a double, not an int.
+    double double1 = 18.0;
+    
+    // 3 is an int, but is automatically converted to a double by the compiler, since we are assigning it to a double
+    double double2 = 3;
+    
+    double double3 = double1 / double2;
+    
+    // The result is 6.0, the double, not 6, the int.
+    printf("double3 = %f\n", double3);
+    
+    // Because C will often automatically convert between numeric types, the difference is not always significant.
+    // You should be careful, however, to note when it does make a difference, such as between floating point and
+    // integer division:
+    printf("10 / 4 = %d, but 10 / 4.0 = %f\n", 10 / 4, 10 / 4.0);
+    
     // One final useful operator that this lesson will cover is the modulo (%) operator.
     // The modulo operator works only for two integral types, 
     // and will give the remainder of division of the first by the second:
@@ -109,9 +131,13 @@ int main(void) {
     
     printf("%d %% %d = %d\n", a, b, a % b);
     
-    // Notice how I used "%%" instead of "%" in the first argument to printf: this is because printf recognizes
+    // The modulo operator has the same precedence as multiplication and division.
+    
+    // Notice how I used "%%" instead of "%" to represent the percent sign in printf: this is because printf recognizes
     // the percent sign % as a special character, and will not actually print a percent sign if we put one by itself.
     // If we want to literally print "%", we use two percent signs (%%).
     // The process of using a special syntax to suppress the special meaning of a character is called "escaping."
     // In this example, we "escaped" a percent sign by using two percent signs.
+    
+    return 0;
 }

@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 2.3}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item Explain what each of the following format specifiers are for:
+\begin{enumerate}
+\item \verb|%c|
+\item \verb|%d|
+\item \verb|%f|
+\item \verb|%s|
+\item \verb|%.3f|
+\end{enumerate}
+
+\item For the following items, give the the output of the following C code
+\begin{lstlisting}[style=CStyle]
+printf("%c\n", my_char);
+printf("%d\n", my_char);
+\end{lstlisting}
+after the following initializations of \verb|my_char|:
+\begin{enumerate}
+\item \verb|my_char = 40|
+\item \verb|my_char = 'A' + '!'|
+\item \verb|my_char = 'z' - 25|
+\end{enumerate}
+
+\item Explain why code containing \verb|char a = '\';| will not compile.
+
+
+\end{enumerate}
+
+
+\end{document}

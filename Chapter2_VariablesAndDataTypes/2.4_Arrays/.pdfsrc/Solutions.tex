@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 2.4}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item \verb|my_chars| is an array of \verb|char| with length 9
+\item \verb|ASCII|
+\item
+\begin{enumerate}
+\item 11 (note the implicit null character)
+\item 5 (note the absence of the null character)
+\end{enumerate}
+\item In this code, \verb|my_string| has no null character: where it terminates is undefined, and it may print
+much more than just \verb|Great| but not necessarily.
+\end{enumerate}
+
+\end{document}

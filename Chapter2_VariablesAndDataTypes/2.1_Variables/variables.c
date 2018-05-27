@@ -39,7 +39,7 @@ int main(void) {
     // (number of format specifiers) + 1 total arguments to printf.
     // The first argument goes with the first format specifier, the second to the second format specifier, and so on.
     
-    // After they are declares, most variables may be have their value changed:
+    // After they are declared, most variables may be have their value changed:
     my_int = 7;
     printf("Now my_int is %d\n", my_int);
     
@@ -74,7 +74,6 @@ int main(void) {
     // Sometimes, we may have variables whose values we know will never change.
     // To ensure that we never accidentally assign a new value to them, it may be useful to declare a "constant" 
     // variable:
-    
     const int my_const_int = 7;
     
     // This statement initialized my_const_int to 7. The keyword "const" tells C that this variable should never be
@@ -94,4 +93,6 @@ int main(void) {
     printf("my_other_const is %d and I can't do anything about it!\n", my_other_const);
     
     // Therefore: always initialize constant variables.
+    
+    return 0;
 }

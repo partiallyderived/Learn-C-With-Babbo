@@ -50,7 +50,7 @@ int main(void) {
     char char2 = 23;
     printf("char1 + char2 = %c\n", char1 + char2);
     
-    // Contrary to what you likely expected, that printf call will print an exclamation point instead of 33.
+    // Contrary to what you may have expected, that printf call will print an exclamation point instead of 33.
     // This is because C will always print a char when formatted with %c.
     // So how does 33 become the exclamation point?
     // The answer is through the ASCII table, which you may find at https://www.asciitable.com/.
@@ -85,25 +85,11 @@ int main(void) {
     // Nonetheless, I will give a brief intuitive appeal here:
     // An asterisk after a type name is a different type that, practically speaking, could represent a sequence of that
     // type. Thus, "char*" is a way to refer to a sequence of chars, which speaks to our intuition of what a string is.
-    // On the otherhand, the "const" is not essential to the concept of a string, however it IS essential when we
-    // are talking about string LITERALS. Essentially, without the const, we could change the characters that appear
-    // in a string literal. Without const, we could, for example, make the literal "Hello World!" actual refer to the
-    // string "!dlroW olleH". 
-    // Now you might be wondering why we don't have the same problem with a const int, for example:
-    int my_int = 3;
-    my_int = 4;
-    printf("3 = %d\n", 3);
-    
-    // Indeed, the previous statement will print 3 = 3 (thank god). The difference in strings has to due with the
-    // combined meaning of const when paired with the asterisk (*). So the following is also safe:
-    char my_char = 'a';
-    my_char = 'b';
-    printf("'a' = %c\n", 'a'); 
-    
-    // Indeed, the previous statement will print 'a' = a (thank god). Nonetheless, if the type of string literals
-    // was char* instead of const char*, we could imagine a language in which the following line prints 
-    // "three fives?\n":
-    printf("Hello World!\n");
+    // On the otherhand, the "const" is not essential to the concept of a string, and the reasons for why we need it in
+    // this case is difficult to explain without knowledge of pointers, and indeed we will deal with strings that are
+    // just typed as char*. Nonetheless, you should never assign a string literal to a char*, such as in the following
+    // line:
+    // char* my_bad_string = "Goodbye, World!";
     
     // Again, the reasons why will become clearer when we discuss pointers and arrays.
     
@@ -139,4 +125,6 @@ int main(void) {
     // Here's an example that uses all format specifiers we have covered.
     const char* a_format_string = "%s is a string, %d is an int, %f is a double, and %c is a char\n";
     printf(a_format_string, a_string, an_int, a_double, a_char);
+    
+    return 0;
 }

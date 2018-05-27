@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 2.3}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item \verb|%c| specifies a placeholder for a \verb|char|
+\item \verb|%d| specifies a placeholder for an \verb|int|
+\item \verb|%f| specifies a placeholder for a \verb|double|
+\item \verb|%s| specifies a placeholder for a string (\verb|char*|)
+\item \verb|%.3f| specifies a placeholder for a double that should have 3 digits past the decimal point.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item \begin{lstlisting}[style=CStyle]
+(
+40
+\end{lstlisting}
+
+\item \begin{lstlisting}[style=CStyle]
+b
+98
+\end{lstlisting}
+
+\item \begin{lstlisting}[style=CStyle]
+a
+97
+\end{lstlisting}
+\end{enumerate}
+
+\item \verb|'\'| is an escape character, and to express it literally, we need it to escape itself: \\
+\verb|char my_char = '\\';| \\
+Note that in the original expression \\
+\verb|char my_char = '\';| \\
+C tries to escape the single quote and then tries to find the terminating \verb|'|, but fails since it cannot. The 
+correct way to literally assign to a single quote would be: \\
+\verb|char my_char = '\''| \\
+
+
+\end{enumerate}
+
+\end{document}

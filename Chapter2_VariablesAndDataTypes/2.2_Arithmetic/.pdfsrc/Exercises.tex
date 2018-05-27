@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 2.2}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+Give the result of each of the following statements, including the type (\verb|int| or \verb|double|)
+of the result.
+\begin{enumerate}
+\item 3 / 4
+\item 5 / 4
+\item 3.0 / 4
+\item 3 / 4.0
+\item 3.0 / 4.0
+\item 8 / 4
+\item 8.0 / 4
+\item 4 \% 2
+\item 4 \% 3
+\item 5 \% 3
+\item 2 \% 3
+\item 12 \% 10
+\item 123 \% 100
+\item 3 - 2 * 3 + 7
+\item (3 - 2) * 3 + 7
+\item 100 / 5 \% 6
+\item 100 / (5 \% 6)
+\end{enumerate}
+
+\end{document}

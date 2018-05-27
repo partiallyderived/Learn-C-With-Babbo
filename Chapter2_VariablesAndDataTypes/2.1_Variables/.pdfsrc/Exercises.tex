@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 2.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item
+In the line
+\begin{lstlisting}[style=CStyle]
+int my_var;
+\end{lstlisting}
+\verb|my_var| is being: \\
+a) Declared, \\
+b) Initialized, \\
+c) Assigned, or \\
+d) Pineapple?
+\item
+\verb|int| is called a(n): \\
+a) Identifier \\
+b) Variable \\
+c) Data Type \\
+d) 80s Sitcom
+\item \verb|my_var| is a \rule{1cm}{0.15mm}, while its name is a(n) \rule{1cm}{0.15mm}: \\
+a) Data Type, Literal \\
+b) Literal, Identifier \\
+c) Variable, Identifier \\
+d) Variable, Literal
+\item For each of the following, say whether \verb|my_var| is initialized. Then, if it was not, say whether it was 
+declared, assigned, or both.
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+int my_var;
+\end{lstlisting}
+
+
+\item 
+\begin{lstlisting}[style=CStyle]
+int my_var = 3;
+\end{lstlisting}
+
+
+\item
+\begin{lstlisting}[style=CStyle]
+int my_var;
+my_var = 3;
+\end{lstlisting}
+
+
+\item 
+\begin{lstlisting}[style=CStyle]
+my_var = 3;
+\end{lstlisting}
+
+\end{enumerate}
+
+\item What is the value of \verb|my_var| after the following line inside the \verb|main| function? 
+
+\begin{lstlisting}[style=CStyle]
+int my_var;
+\end{lstlisting}
+
+a) 0 \\
+b) 1 \\
+c) The code will not compile before \verb|my_var| is assigned. \\
+d) The value of \verb|my_var| is unpredictable.
+
+\item In the expression 
+
+\begin{lstlisting}[style=CStyle]
+int my_var = 3;
+\end{lstlisting}
+
+\verb|3| is called a(n): \\
+a) \verb|int| variable \\
+b) \verb|int| literal \\
+c) \verb|int| datatype \\
+d) \verb|int| elligent
+
+\item After the execution of
+
+\begin{lstlisting}[style=CStyle]
+int my_var1 = 2;
+int my_var2 = my_var1;
+my_var1 = 4;
+\end{lstlisting}
+what is the value of \verb|my_var2|?
+
+\item For each of the following, say whether it is a valid identifier or not. If it is not, give a reason why. \\
+a) \verb|dataDyne| \\
+b) \verb|iPhone| \\
+c) \verb|2birds1stone| \\
+d) \verb|two_birds_one_stone| \\
+e) \verb|two_birds_1_stone| \\
+f) \verb|Whoa!| \\
+g) \verb|xwing@aliciousness| \\
+h) \verb|_hi_|
+
+\item Write a statement that prints the value of the \verb|int| variable \verb|my_var| followed by a new line.
+\end{enumerate}
+
+\end{document}

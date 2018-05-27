@@ -20,11 +20,15 @@ int main(void) {
     // In this case, printf takes only one argument: "Hello World!\n".
     // In programming terminology, we say that printf was "called" with the argument "Hello World!\n".
     // The \n at the end of "Hello World!\n" tells our program to also print a new line.
-    // Without \n, the terminal prompt would be printed on the same line as "Hello World!", which looks ugly.
+    // Without \n, the terminal prompt would be printed on the same line as "Hello World!", which looks ugly, unless you 
+    // are on Windows using the Command Prompt, which automatically puts a newline after every command.
     // This call to printf constitutes what is called a "statement", which is essentially a piece of code that
     // "does something." All statements in C need to be followed by a semi-colon (;).
     printf("Hello World!\n");
     
     // Note that if we did not have the line "#include <stdio.h>" at the beginning of the file, the C compiler would not
     // have been able to find printf, and our program would not have compiled.
+    
+    // It is prudent but not strictly necessary to put "return 0;" before main's closing brace.
+    return 0;
 }

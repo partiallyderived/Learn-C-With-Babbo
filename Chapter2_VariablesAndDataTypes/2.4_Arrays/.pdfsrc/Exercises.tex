@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 2.4}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item Describe what data type \verb|my_chars| is in the following declaration: \\
+\verb|char my_chars[9]|
+\item What is the output of the following statements?
+\begin{lstlisting}[style=CStyle]
+char my_chars[] = {65, 83, 67, 73, 73, 0};
+printf('%s\n', my_chars);
+\end{lstlisting}
+\item What are the lengths (number of elements) of the following arrays?
+\begin{enumerate}
+\item \verb|char arr[] = "What's up?";|
+\item \verb|char arr[] = {'G', 'r', 'e', 'a', 't'};|
+\end{enumerate}
+\item Explain the problem with the following code:
+\begin{lstlisting}[style=CStyle]
+char my_string[] = {'G', 'r', 'e', 'a', 't'};
+printf('%s\n', my_string);
+\end{lstlisting}
+\end{enumerate}
+
+\end{document}

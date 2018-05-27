@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 1.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+\begin{enumerate}
+\item In the "Hello World" program, what does the line \\
+\begin{lstlisting}[style=CStyle]
+printf("Hello World!\n");
+\end{lstlisting}
+do? Try changing it to \\
+\begin{lstlisting}[style=CStyle]
+printf("Hello World!");
+\end{lstlisting}
+and compile it and run it again. What's the difference?
+\item
+Remove the line \\
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+\end{lstlisting}
+and try to recompile the program. It should fail: why is this so?
+
+\end{enumerate}
+
+\end{document}
