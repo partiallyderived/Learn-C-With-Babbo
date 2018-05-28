@@ -13,3 +13,6 @@ in this course:
     * Here we start building more interesting, but still basic, programs. We will get into the habit of printing to the
       console through C to confirm our understanding and aid our intuitions about variables and the types of data they
       represent.
+* Chapter 3: Command Line Input and Output
+    * This short chapter shifts away from exposition and introduces a mechanism for producing potential useful programs: 
+      user interaction with the command line.

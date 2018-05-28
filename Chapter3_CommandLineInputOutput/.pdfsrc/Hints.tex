@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Hints Chapter 3}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+You can use integer division and the modulo (\%) operator to get the total of the largest denomination and the remaining
+amount. For example, \verb|736 / 100| gives 7, for 7 dollars, and \verb|736 % 100| gives 36, for the remaining 36 cents.
+But the modulo operator and integer division will only work on integers, and the dollar amount is entered as a
+floating-point number. Can you think of a way to convert it to an integer using the example I just gave?
+
+
+\end{document}

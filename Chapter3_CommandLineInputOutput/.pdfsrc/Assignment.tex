@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Programming Assignment for Chapter 3}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+Congratulations, you now know enough about C to create some simple programs that may be useful, which means it's time 
+for your first programming assignment! 
+
+This programming assignment has two parts. The first part is simple: you will first prompt the user for their
+first and last names, and print their full name back to them, using prompts like the following:
+\begin{verbatim}
+Enter your first name: 
+Enter your last name:
+Hi <first name> <last name>!
+\end{verbatim}
+
+Once the user has entered their first and last name, your task is to is to give them their change for some item they
+are buying. To do so, first ask the user to input the cost of the item in dollars, with the decimals being the number
+of cents, and then how much they are paying for the item:
+\begin{verbatim}
+Enter the item's cost: 
+Enter the amount paid:
+You are owed $<paid - cost> in change!
+\end{verbatim}
+The dollar sign should be omitted. You may assume \verb|paid >= cost|. Then, you are to output the number of dollars, 
+quarters, dimes, nickels, and pennies the user is owed, using the largest denominations possible before going to smaller
+denominations. For example:
+\begin{verbatim}
+Enter the item's cost: 3.14
+Enter the amount paid: 10.50
+You are owed $7.36 in change!
+That would be:
+7 dollars,
+1 quarters,
+1 dimes,
+0 nickels,
+and 1 pennies!
+\end{verbatim}
+For now, you can leave the "s" on even if the quantity is one: once we learn conditionals, you will see how to
+handle this case specially.
+
+I have included "Hints.pdf" for assistance in completing this assignment. I recommend trying to complete the assignment
+without hints first, and then using the Hints.pdf if you are having trouble. It is crucial that you are able to complete
+this assignment correctly before you continue in this course.
+\end{document}
