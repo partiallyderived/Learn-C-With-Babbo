@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int main(void) {
     // So far, our programs have been pretty boring: all we've been doing is printing things onto to console.
     // This will be the first lesson where we actually make a program the user interacts with.
     

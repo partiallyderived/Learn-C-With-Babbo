@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 4.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+24
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+34
+70
+34
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+2.93
+\end{lstlisting}
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item It has a function definition inside a function body, which is not allowed in standard C.
+\item \verb|goodbye| takes no arguments, but does not have \verb|void| inside the argument parentheses.
+\item \verb|func| is defined inside \verb|main|. Since \verb|main| is itself a function, this is forbidden in standard 
+C.
+\end{enumerate}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int scan_int(void) {
+    int a;
+    scanf("%d", &a);
+    return a;
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+double square(double arg) {
+    return arg * arg;
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+void print_square(double arg) {
+    printf("%f", arg * arg);
+}
+\end{lstlisting}
+\end{enumerate}
+\end{document}
