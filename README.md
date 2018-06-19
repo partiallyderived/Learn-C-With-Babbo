@@ -16,3 +16,5 @@ in this course:
 * Chapter 3: Command Line Input and Output
     * This short chapter shifts away from exposition and introduces a mechanism for producing potential useful programs: 
       user interaction with the command line.
+* Chapter 4: Functions
+    * This chapter finally explains what functions are, and how to define and use them.
