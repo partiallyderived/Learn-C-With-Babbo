@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Programming Assignment 5.3}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+First, think of your favorite color and your favorite number (come on, we all have one). You will prepare two
+prompts for the user. The first should ask for the user's favorite color. If the user enters your favorite color,
+you should make some kind of remark (e.g., ``Hey, that's my favorite color too!''). Do the same for the user's 
+favorite number. Afterwards, conditionally print an additional remark based on whether either the user has entered both 
+your favorite color and number (e.g., ``You've got good taste'') or if the user has entered neither your favorite 
+color or number (e.g., ``Hmm, I guess we don't have much in common''). You may find it useful to refer back to 
+Chapter 3 and lesson 2.4.
+\end{document}

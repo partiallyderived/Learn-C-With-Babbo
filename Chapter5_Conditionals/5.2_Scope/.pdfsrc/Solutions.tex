@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 5.2}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+\begin{enumerate}
+\item
+
+\begin{enumerate}
+\item\verb|var| is referenced outside its defining scope.
+
+\item \verb|other_other_var| is referenced outside of its defining scope.
+\end{enumerate}
+\end{enumerate}
+\end{document}

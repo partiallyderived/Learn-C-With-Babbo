@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 4.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item Give the output of the following programs:
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+
+int twice(int a) {
+    return a * 2;
+}
+
+int main(void) {
+    printf("%d\n", 4 * twice(3));
+    return 0;
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+
+int half_and_decrement(int num) {
+    num = num / 2;
+    printf("%d\n", num);
+    num = num - 1;
+    return num;
+}
+
+int main(void) {
+    int a = 70;
+    printf("%d\n", half_and_decrement(a));
+    printf("%d\n", a);
+    a = half_and_decrement(a);
+    printf("%d\n", a);
+    return 0;
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+
+double average(double a, double b) {
+    a = a / 2;
+    printf("%d\n", a);
+    b = b / 2;
+    printf("%d\n", b);
+    return a + b;
+}
+
+int main(void) {
+    double a = 3.14;
+    double b = 2.72;
+    printf("%f\n", average(a, b));
+    printf("%f\n", a);
+    printf("%f\n", b);
+    return 0;
+}
+
+\end{lstlisting}
+\end{enumerate}
+\item What is wrong with each of the following function definitions?
+\begin{enumerate}
+\item
+\begin{lstlisting}[style=CStyle]
+int func1(int a) {
+    int func2(int b) {
+        return b / 2;
+    }
+    return func2(a);
+}
+\end{lstlisting}
+
+\item 
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+
+void goodbye() {
+    printf("See ya!\n");
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int main(void) {
+    int func(int a) {
+        return a * 2;
+    }
+    int a = func(2);
+    return 0;
+}
+\end{lstlisting}
+\end{enumerate}
+\item Write a function called \verb|scan_int| taking no arguments that will return an \verb|int| read from user input.
+\item Write a function called \verb|square| that returns the square of a \verb|double| argument.
+\item Write a function called \verb|print_square|that prints the square of a \verb|double| argument but does not return 
+it (or anything else). 
+
+\end{enumerate}
+
+
+\end{document}

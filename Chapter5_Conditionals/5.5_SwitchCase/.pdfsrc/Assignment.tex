@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Programming Assignment 5.5}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+For this assignment, write a program that will output a statement of the form \\
+
+\verb|I <verb> <adjective> <noun> <adverb>.| \\
+
+For instance, one possible output could be \\
+
+\verb|I adore salty chips tremendously.| \\
+
+For the verb, adjective, noun, and adverb, the user should choose between an enumerated list of words following some
+prompt. For example, for the noun, you could have as a prompt:
+
+\begin{verbatim}
+Enter a noun: 
+1) cat
+2) dog
+3) parrot
+4) giraffe
+> 
+\end{verbatim}
+
+You should use switch statements to select the word, and do the same for the adjective, verb, and adverb. Then, your
+program should print out the resulting sentence.
+
+\end{document}

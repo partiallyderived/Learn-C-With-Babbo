@@ -1,4 +1,5 @@
-Hiya! This repository is all about learning C with Babbo. To use this course, click on the chapter directories (folders)
+Hiya! In this repository, you can learn C with Babbo, a monkey-like creature who spends the vast majority of its time in
+front of a computer screen. To use this course, click on the chapter directories (folders)
 and read the PDFs and/or source code associated with each lesson and chapter. Directories prefixed with a period
 (e.g., `.hidden`) have files used to generate PDFs and are unrelated to the course. Here is a summary of what is covered
 in this course:
@@ -18,3 +19,6 @@ in this course:
       user interaction with the command line.
 * Chapter 4: Functions
     * This chapter finally explains what functions are, and how to define and use them.
+* Chapter 5: Conditionals
+    * This chapter introduces conditional statements, which allow to choose whether to execute some portions of our
+      code based on prior conditions.

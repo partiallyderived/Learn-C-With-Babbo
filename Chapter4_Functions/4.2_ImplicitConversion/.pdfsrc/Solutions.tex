@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 4.2}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+
+\begin{enumerate}
+\item
+
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+1
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+12
+\end{lstlisting}
+
+\begin{lstlisting}[style=CStyle]
+6.00
+\end{lstlisting}
+\end{enumerate}
+
+\item
+\begin{enumerate}
+
+\item 
+\begin{lstlisting}[style=CStyle]
+int
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+double
+\end{lstlisting}
+
+\item 
+\begin{lstlisting}[style=CStyle]
+float
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+long
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+double
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+double
+\end{lstlisting}
+\end{enumerate}
+
+\item \verb|12| (note that \verb|-1.5| is rounded down to \verb|-2|)
+
+\item The conversions from integral values to floating point values are usually exact, while the conversion of a 
+floating point value to an integral value will result in the loss of the fractional part of that value.
+\end{enumerate}
+\end{document}

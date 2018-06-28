@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Solutions 5.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+0
+\end{lstlisting}
+
+\item 
+\begin{lstlisting}[style=CStyle]
+1
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+0
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+2
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+0
+1
+2
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+7
+\end{lstlisting}
+\end{enumerate}
+
+\item 
+
+\begin{enumerate}
+\item Sample:
+\begin{lstlisting}[style=CStyle]
+int is_even(int arg) {
+    if (arg % 2 == 0) {
+        return 1;
+    }
+    return 0;
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+Odd
+\end{lstlisting}
+\end{enumerate}
+
+\item
+It uses \verb|=| instead of \verb|==| to check for equality. It will appear to run correctly however, for reasons
+we will discuss later.
+\end{enumerate}
+\end{document}

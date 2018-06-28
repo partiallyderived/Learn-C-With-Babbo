@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{inconsolata}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+\definecolor{cbackground}{rgb}{0.9, 0.9, 0.9}
+\definecolor{cstring}{rgb}{0, 0.5, 0}
+
+\lstset{language=C, upquote=true}
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{cbackground},
+    keywordstyle=\color{blue},
+    stringstyle=\color{cstring},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,              
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+
+\begin{document}
+\title{Exercises 5.1}
+\author{Learn C With Babbo}
+\date{}
+\maketitle
+\begin{enumerate}
+\item
+Give the output of the following blocks of code:
+\begin{enumerate}
+\item 
+\begin{lstlisting}[style=CStyle]
+if (3 > -2) {
+    printf('0\n');
+} else {
+    printf('1\n');
+}
+\end{lstlisting}
+
+\item 
+\begin{lstlisting}[style=CStyle]
+int a = 18;
+if (a < 10) {
+    printf("0\n");
+} else if (a < 20) {
+    printf("1\n");
+} else if (a < 30) {
+    printf("2\n");
+} else {
+    printf("3\n");
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int b = -7
+if (b < 0) {
+    printf("0\n");
+} else if (b == -7) {
+    printf("1\n");
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int a = 90;
+if (a > 200) {
+    printf("0\n");
+} else if (a > 90) {
+    printf("1\n");
+} else {
+    printf("2\n");
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int a = 50;
+if (a - 20 > 20) {
+    printf("0\n");
+} 
+if (a % 51 >= 50) {
+    printf("1\n");    
+}
+if (a * 9 != 500) {
+    printf("2\n");
+}
+\end{lstlisting}
+
+\item
+\begin{lstlisting}[style=CStyle]
+int a = 35;
+int b = 8;
+printf("%d\n", 2 * (a % 3 == 2) + 5 * (b / 3 > 1) - 6 * (a - b * 4 < 0));
+\end{lstlisting}
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item Write a function called \verb|is_even| that takes an \verb|int| as an argument and returns 0 if that \verb|int|
+is odd, and 1 if that \verb|int| is even.
+
+\item Given your function definition above, give the output of the following code block:
+\begin{lstlisting}[style=CStyle]
+int a = 4;
+int b = 9;
+if (is_even(a + b)) {
+    printf("Even\n");
+} else {
+    printf("Odd\n");
+}
+\end{lstlisting}
+\end{enumerate}
+
+\item What is wrong with the following code block?
+\begin{lstlisting}[style=CStyle]
+int a = 9;
+if (a * 3 = 27) {
+    printf("0\n");
+} else {
+    printf("1\n");
+}
+\end{lstlisting}
+\end{enumerate}
+\end{document}
