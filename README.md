@@ -1,5 +1,5 @@
-Hiya! In this repository, you can learn C with Babbo, a monkey-like creature who spends the vast majority of its time in
-front of a computer screen. To use this course, click on the chapter directories (folders)
+Hiya! In this repository, you can learn C with Babbo, a monkey-like creature that spends the vast majority of its time 
+in front of a computer screen. To use this course, click on the chapter directories (folders)
 and read the PDFs and/or source code associated with each lesson and chapter. Directories prefixed with a period
 (e.g., `.hidden`) have files used to generate PDFs and are unrelated to the course. Here is a summary of what is covered
 in this course:
