@@ -20,5 +20,5 @@ in this course:
 * Chapter 4: Functions
     * This chapter finally explains what functions are, and how to define and use them.
 * Chapter 5: Conditionals
-    * This chapter introduces conditional statements, which allow to choose whether to execute some portions of our
+    * This chapter introduces conditional statements, which allow us to choose whether to execute some portions of our
       code based on prior conditions.
